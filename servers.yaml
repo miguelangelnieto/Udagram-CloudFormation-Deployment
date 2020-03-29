@@ -184,7 +184,7 @@ Resources:
           apt-get install apache2 -y
           systemctl start apache2.service
           cd /var/www/html
-          echo "it works! Udagram, Udacity" > index.html
+          aws s3 cp s3://udagram-bucket-project/index.html ./
 
   WEBTARGETGROUP:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
