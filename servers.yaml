@@ -181,7 +181,7 @@ Resources:
         Fn::Base64: !Sub |
           #!/bin/bash
           apt-get update -y
-          apt-get install apache2 -y
+          apt-get install apache2 awscli -y
           systemctl start apache2.service
           cd /var/www/html
           aws s3 cp s3://udagram-bucket-project/index.html ./
