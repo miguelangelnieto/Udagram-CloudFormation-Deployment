@@ -245,13 +245,13 @@ Resources:
       NatGatewayId: !Ref NATGW2
       RouteTableId: !Ref PRIVROUTETABLE2
 
-  PUBROUTEASSOCIATION1:
+  PRIVROUTEASSOCIATION1:
       Type: AWS::EC2::SubnetRouteTableAssociation
       Properties:
           RouteTableId: !Ref PRIVROUTETABLE1
           SubnetId: !Ref PRIVSUBNET1
 
-  PUBROUTEASSOCIATION2:
+  PRIVROUTEASSOCIATION2:
       Type: AWS::EC2::SubnetRouteTableAssociation
       Properties:
           RouteTableId: !Ref PRIVROUTETABLE2
@@ -287,3 +287,15 @@ Outputs:
     Value: !Ref PRIVSUBNET2
     Export:
       Name: !Sub "${AWS::StackName}-PRIVSUBNET2"
+
+  StackPRIVSUBNETS:
+    Description: A list of the Private Subnets
+    Value: !Join [ ",", [ !Ref PRIVSUBNET1, !Ref PRIVSUBNET2 ]]
+    Export:
+      Name: !Sub "${AWS::StackName}-PRIVSUBNETS"
+
+  StackPUBSUBNETS:
+    Description: A list of the Private Subnets
+    Value: !Join [ ",", [ !Ref PUBSUBNET1, !Ref PUBSUBNET2 ]]
+    Export:
+      Name: !Sub "${AWS::StackName}-PUBSUBNETS"
