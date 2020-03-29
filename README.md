@@ -1,5 +1,6 @@
 # Udagram CloudFormation Deployment
- (https://www.udacity.com/course/cloud-dev-ops-nanodegree--nd9991)[Udacity's DevOps Nanodegree CloudFormation Project]
+
+ [Udacity's DevOps Nanodegree CloudFormation Project](https://www.udacity.com/course/cloud-dev-ops-nanodegree--nd9991)
 
 Your company is creating an Instagram clone called Udagram. Developers pushed the latest version of their code in a zip file located in a public S3 Bucket.
 
